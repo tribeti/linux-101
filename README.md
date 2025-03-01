@@ -91,3 +91,15 @@ rm <tên-file>
 ```bash
 rm -ri <tên-file>
 ```
+### Tạo lối tắt
+```bash
+ln -s <tên thư mục / đường dẫn tới file> <tên gợi nhớ>
+```
+Ví dụ:
+```bash
+ln -s Java/src src-java
+```
+Link ở đây được định như file nên nếu muốn xóa thì 
+```bash
+rm src-java
+```
