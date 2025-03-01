@@ -41,3 +41,32 @@ ls
 ```bash
 rmdir <tên folder>
 ```
+## Sao chép file 
+##### Nếu muốn file chung folder
+```bash
+cp <tên file muốn copy> <tên file mới>.<đuôi file>
+```
+##### hoặc nếu muốn copy qua folder khác
+```bash
+cp <tên file muốn copy> <đường dẫn tới folder khác/tên file mới>.<đuôi file>
+```
+
+## Di chuyển file 
+##### Nếu muốn đổi tên file
+```bash
+mv <tên file muốn di chuyển> <tên file mới>.<đuôi file>
+```
+##### hoặc nếu muốn di chuyển qua folder khác
+```bash
+cp <tên file muốn di chuyển> <đường dẫn tới folder khác/tên file mới>.<đuôi file>
+```
+
+## Xóa file
+##### Như này thì sẽ không yêu cầu xác nhận
+```bash
+rm <tên file>
+```
+##### nếu muốn xác nhận trước khi xóa
+```bash
+rm -ri <tên file>
+```
