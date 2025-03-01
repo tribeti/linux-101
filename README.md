@@ -1,106 +1,91 @@
 # Tài liệu tổng hợp lệnh trong Linux (Ubuntu)
 
 ## Mục lục
-1. [Cách mở terminal trong Ubuntu](#cách-mở-terminal-trong-ubuntu)
-2. [Tạo thư mục](#tạo-thư-mục)
-3. [Di chuyển thư mục](#di-chuyển-thư-mục)
-4. [Tạo file mới](#tạo-file-mới)
-5. [Các lệnh khác](#các-lệnh-khác)
-    - [In đường dẫn hiện tại](#in-đường-dẫn-hiện-tại)
-    - [Liệt kê các file](#liệt-kê-các-file)
+1. [Bắt đầu với Terminal](#bắt-đầu-với-terminal)
+2. [Thao tác với thư mục](#thao-tác-với-thư-mục)
+    - [Tạo thư mục mới](#tạo-thư-mục-mới)
+    - [Di chuyển giữa các thư mục](#di-chuyển-giữa-các-thư-mục)
     - [Xóa thư mục](#xóa-thư-mục)
-    - [Sao chép file](#sao-chép-file)
-    - [Di chuyển file](#di-chuyển-file)
-    - [Xóa file](#xóa-file)
-    - [Tạo lối tắt](#tạo-lối-tắt)
+3. [Thao tác với tệp tin](#thao-tác-với-tệp-tin)
+    - [Tạo tệp tin mới](#tạo-tệp-tin-mới)
+    - [Sao chép tệp tin](#sao-chép-tệp-tin)
+    - [Di chuyển và đổi tên tệp tin](#di-chuyển-và-đổi-tên-tệp-tin)
+    - [Xóa tệp tin](#xóa-tệp-tin)
+4. [Lệnh hệ thống](#lệnh-hệ-thống)
+    - [Xem đường dẫn hiện tại](#xem-đường-dẫn-hiện-tại)
+    - [Liệt kê nội dung thư mục](#liệt-kê-nội-dung-thư-mục)
+5. [Liên kết và lối tắt](#liên-kết-và-lối-tắt)
+    - [Tạo liên kết mềm](#tạo-liên-kết-mềm)
 
-## Cách mở terminal trong Ubuntu
-- Cách 1: Ở desktop chọn icon Ubuntu và sau đó chọn Terminal.
-- Cách 2: Sử dụng tổ hợp phím `Ctrl + Alt + T`.
+## Bắt đầu với Terminal
+- Cách 1: Ở desktop chọn icon Ubuntu và sau đó chọn Terminal
+- Cách 2: Sử dụng tổ hợp phím `Ctrl + Alt + T`
 
-## Tạo thư mục
+## Thao tác với thư mục
+
+### Tạo thư mục mới
 ```bash
 mkdir <tên-thư-mục>
 ```
-Ví dụ:
+
+### Di chuyển giữa các thư mục
 ```bash
-mkdir Java
+cd <tên-thư-mục>    # Di chuyển đến thư mục cụ thể
+cd ~                # Di chuyển về thư mục home
+cd ..              # Di chuyển lên thư mục cha
+cd -               # Di chuyển về thư mục trước đó
 ```
 
-## Di chuyển thư mục
-- Di chuyển đến thư mục:
+### Xóa thư mục
 ```bash
-cd <tên-thư-mục>
-```
-- Di chuyển về thư mục gốc (root):
-```bash
-cd ~
+rmdir <tên-thư-mục>     # Xóa thư mục trống
+rm -r <tên-thư-mục>     # Xóa thư mục và nội dung bên trong
+rm -rf <tên-thư-mục>    # Xóa bắt buộc, không cần xác nhận
 ```
 
-## Tạo file mới
+## Thao tác với tệp tin
+
+### Tạo tệp tin mới
 ```bash
 touch <tên-file>.<đuôi-file>
 ```
-Ví dụ:
+
+### Sao chép tệp tin
 ```bash
-touch main.py
+cp <nguồn> <đích>
+cp <tệp-tin> <thư-mục-đích>
+cp -r <thư-mục-nguồn> <thư-mục-đích>    # Sao chép thư mục
 ```
 
-## Các lệnh khác
+### Di chuyển và đổi tên tệp tin
+```bash
+mv <tên-cũ> <tên-mới>               # Đổi tên
+mv <tệp-tin> <thư-mục-đích>        # Di chuyển
+```
 
-### In đường dẫn hiện tại
+### Xóa tệp tin
+```bash
+rm <tên-file>          # Xóa không xác nhận
+rm -i <tên-file>       # Xóa có xác nhận
+```
+
+## Lệnh hệ thống
+
+### Xem đường dẫn hiện tại
 ```bash
 pwd
 ```
 
-### Liệt kê các file trong thư mục hiện tại
+### Liệt kê nội dung thư mục
 ```bash
-ls
+ls              # Liệt kê cơ bản
+ls -l           # Liệt kê chi tiết
+ls -a           # Hiện cả file ẩn
 ```
 
-### Xóa thư mục (thư mục phải trống)
-```bash
-rmdir <tên-thư-mục>
-```
+## Liên kết và lối tắt
 
-### Sao chép file
-- Nếu muốn file chung thư mục:
+### Tạo liên kết mềm
 ```bash
-cp <tên-file-muốn-copy> <tên-file-mới>.<đuôi-file>
-```
-- Nếu muốn copy qua thư mục khác:
-```bash
-cp <tên-file-muốn-copy> <đường-dẫn-tới-thư-mục-khác/tên-file-mới>.<đuôi-file>
-```
-
-### Di chuyển file
-- Nếu muốn đổi tên file:
-```bash
-mv <tên-file-muốn-di-chuyển> <tên-file-mới>.<đuôi-file>
-```
-- Nếu muốn di chuyển qua thư mục khác:
-```bash
-mv <tên-file-muốn-di-chuyển> <đường-dẫn-tới-thư-mục-khác/tên-file-mới>.<đuôi-file>
-```
-
-### Xóa file
-- Xóa không cần xác nhận:
-```bash
-rm <tên-file>
-```
-- Xóa yêu cầu xác nhận:
-```bash
-rm -ri <tên-file>
-```
-### Tạo lối tắt
-```bash
-ln -s <tên thư mục / đường dẫn tới file> <tên gợi nhớ>
-```
-Ví dụ:
-```bash
-ln -s Java/src src-java
-```
-Link ở đây được định như file nên nếu muốn xóa thì 
-```bash
-rm src-java
+ln -s <đường-dẫn-đích> <tên-liên-kết>
 ```
