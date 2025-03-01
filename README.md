@@ -12,6 +12,7 @@
     - [Sao chép file](#sao-chép-file)
     - [Di chuyển file](#di-chuyển-file)
     - [Xóa file](#xóa-file)
+    - [Tạo lối tắt](#tạo-lối-tắt)
 
 ## Cách mở terminal trong Ubuntu
 - Cách 1: Ở desktop chọn icon Ubuntu và sau đó chọn Terminal.
