@@ -1,10 +1,8 @@
-Dưới đây là toàn bộ nội dung bằng Markdown để bạn có thể dễ dàng copy:
-
 # 📘 Hướng Dẫn Lệnh Linux (Ubuntu)
 
 <div align="center">
   
-  ![Linux Logo](assets/12.png)
+  ![Linux Logo](assets/2993667_ubuntu_icon.png)
 
   **Tài liệu tổng hợp các lệnh cơ bản trong Ubuntu Linux**
   
