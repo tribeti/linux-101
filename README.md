@@ -44,13 +44,12 @@ mkdir -p <thư-mục1>/<thư-mục2>     # Tạo cấu trúc thư mục lồng n
 ```
 
 ### Di chuyển giữa các thư mục
-
-| Lệnh | Mô tả |
-|------|-------|
-| `cd <tên-thư-mục>` | Di chuyển đến thư mục cụ thể |
-| `cd ~` | Di chuyển về thư mục home |
-| `cd ..` | Di chuyển lên thư mục cha |
-| `cd -` | Di chuyển về thư mục trước đó |
+```bash
+cd <tên-thư-mục>   # Di chuyển đến thư mục cụ thể
+cd ~              # Di chuyển về thư mục home
+cd ..             # Di chuyển lên thư mục cha
+cd -              # Di chuyển về thư mục trước đó
+```
 
 ### Xóa thư mục
 
@@ -190,7 +189,6 @@ uniq -u <tên-file>           # Chỉ hiển thị các dòng không lặp lại
 find <đường-dẫn> -name "<tên-file>"    # Tìm file theo tên
 find . -type f                         # Tìm tất cả các file
 find . -type d                         # Tìm tất cả các thư mục
-find . -size +10M                      # Tìm file lớn hơn 10MB
 ```
 
 ---
@@ -218,12 +216,13 @@ ls -l | grep "txt"            # Tìm các file .txt trong danh sách
 ```
 
 ### Trình tự câu lệnh
+```bash
+# Sử dụng dấu ; để thực hiện tuần tự không phụ thuộc
+sort abc.txt ; cat
 
-| Cú pháp | Mô tả |
-|---------|-------|
-| `sort abc.txt ; cat` | Thực hiện tuần tự không phụ thuộc |
-| `sort abc.txt && cat` | Lệnh 2 chỉ chạy nếu lệnh 1 thành công |
-| `sort abc.txt  cat` | Lệnh 2 chỉ chạy nếu lệnh 1 thất bại |
+# Sử dụng && để lệnh thứ hai chỉ chạy khi lệnh thứ nhất thành công
+sort abc.txt && cat
+```
 
 ---
 
