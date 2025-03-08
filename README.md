@@ -1,284 +1,352 @@
-# Tài liệu tổng hợp lệnh trong Linux (Ubuntu)
+Dưới đây là toàn bộ nội dung bằng Markdown để bạn có thể dễ dàng copy:
 
-## Mục lục
-1. [Bắt đầu với Terminal](#bắt-đầu-với-terminal)
-2. [Thao tác với thư mục](#thao-tác-với-thư-mục)
-    - [Tạo thư mục mới](#tạo-thư-mục-mới)
-    - [Di chuyển giữa các thư mục](#di-chuyển-giữa-các-thư-mục)
-    - [Xóa thư mục](#xóa-thư-mục)
-3. [Thao tác với tệp tin](#thao-tác-với-tệp-tin)
-    - [Tạo tệp tin mới](#tạo-tệp-tin-mới)
-    - [Sao chép tệp tin](#sao-chép-tệp-tin)
-    - [Di chuyển và đổi tên tệp tin](#di-chuyển-và-đổi-tên-tệp-tin)
-    - [Xóa tệp tin](#xóa-tệp-tin)
-4. [Lệnh hệ thống](#lệnh-hệ-thống)
-    - [Xem đường dẫn hiện tại](#xem-đường-dẫn-hiện-tại)
-    - [Liệt kê nội dung thư mục](#liệt-kê-nội-dung-thư-mục)
-5. [Liên kết và lối tắt](#liên-kết-và-lối-tắt)
-    - [Tạo liên kết mềm](#tạo-liên-kết-mềm)
-6. [Thao tác với nội dung file](#thao-tác-với-nội-dung-file)
-    - [Đọc nội dung file](#đọc-nội-dung-file)
-    - [Đếm số từ, câu](#đếm-số-từ-câu)
-    - [So sánh kí tự](#so-sánh-kí-tự)
-    - [Tìm kiếm văn bản](#tìm-kiếm-văn-bản)
-    - [Sắp xếp văn bản](#sắp-xếp-văn-bản)
-    - [Lệnh uniq](#lệnh-uniq)
-7. [Tìm kiếm và lọc](#tìm-kiếm-và-lọc)
-    - [Lệnh tìm kiếm trong thư mục](#lệnh-tìm-kiếm-trong-thư-mục)
-8. [Điều hướng đầu vào và đầu ra](#điều-hướng-đầu-vào-và-đầu-ra)
-    - [Điều chỉnh đầu ra](#điều-chỉnh-đầu-ra)
-    - [Điều chỉnh đầu vào](#điều-chỉnh-đầu-vào)
-    - [Kết hợp câu lệnh](#kết-hợp-câu-lệnh)
-    - [Trình tự câu lệnh](#trình-tự-câu-lệnh)
-9. [Quản lý tiến trình](#quản-lý-tiến-trình)
-    - [Xem ứng dụng và tiến trình đang chạy](#xem-ứng-dụng-và-tiến-trình-đang-chạy)
-    - [Dừng tiến trình](#dừng-tiến-trình)
-    - [Tạm dừng tiến trình đang chạy](#tạm-dừng-tiến-trình-đang-chạy)
-10. [Tùy biến](#tùy-biến)
-    - [Gán lệnh](#gán-lệnh)
+# 📘 Hướng Dẫn Lệnh Linux (Ubuntu)
 
-## Bắt đầu với Terminal
-- Cách 1: Ở desktop chọn icon Ubuntu và sau đó chọn Terminal
-- Cách 2: Sử dụng tổ hợp phím `Ctrl + Alt + T`
+<div align="center">
+  
+  ![Linux Logo](assets/12.png)
 
-## Thao tác với thư mục
+  **Tài liệu tổng hợp các lệnh cơ bản trong Ubuntu Linux**
+  
+</div>
+
+## 📋 Mục Lục
+
+- [🚀 Bắt Đầu Với Terminal](#-bắt-đầu-với-terminal)
+- [📁 Thao Tác Với Thư Mục](#-thao-tác-với-thư-mục)
+- [📄 Thao Tác Với Tệp Tin](#-thao-tác-với-tệp-tin)
+- [⚙️ Lệnh Hệ Thống](#️-lệnh-hệ-thống)
+- [🔗 Liên Kết Và Lối Tắt](#-liên-kết-và-lối-tắt)
+- [📝 Thao Tác Với Nội Dung File](#-thao-tác-với-nội-dung-file)
+- [🔍 Tìm Kiếm Và Lọc](#-tìm-kiếm-và-lọc)
+- [↪️ Điều Hướng Đầu Vào Và Đầu Ra](#️-điều-hướng-đầu-vào-và-đầu-ra)
+- [⏯️ Quản Lý Tiến Trình](#️-quản-lý-tiến-trình)
+- [🛠️ Tùy Biến](#️-tùy-biến)
+- [💻 Lập Trình Trên Linux](#-lập-trình-trên-linux)
+
+---
+
+## 🚀 Bắt Đầu Với Terminal
+
+<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> - Mở terminal nhanh chóng
+
+*Hoặc tìm kiếm "Terminal" trong menu Ubuntu*
+
+---
+
+## 📁 Thao Tác Với Thư Mục
 
 ### Tạo thư mục mới
+
 ```bash
-mkdir <tên-thư-mục>
+mkdir <tên-thư-mục>                # Tạo một thư mục
+mkdir -p <thư-mục1>/<thư-mục2>     # Tạo cấu trúc thư mục lồng nhau
 ```
 
 ### Di chuyển giữa các thư mục
-```bash
-cd <tên-thư-mục>    # Di chuyển đến thư mục cụ thể
-cd ~                # Di chuyển về thư mục home
-cd ..              # Di chuyển lên thư mục cha
-cd -               # Di chuyển về thư mục trước đó
-```
+
+| Lệnh | Mô tả |
+|------|-------|
+| `cd <tên-thư-mục>` | Di chuyển đến thư mục cụ thể |
+| `cd ~` | Di chuyển về thư mục home |
+| `cd ..` | Di chuyển lên thư mục cha |
+| `cd -` | Di chuyển về thư mục trước đó |
 
 ### Xóa thư mục
+
 ```bash
 rmdir <tên-thư-mục>     # Xóa thư mục trống
 rm -r <tên-thư-mục>     # Xóa thư mục và nội dung bên trong
 rm -rf <tên-thư-mục>    # Xóa bắt buộc, không cần xác nhận
 ```
 
-## Thao tác với tệp tin
+> ⚠️ **Cảnh báo**: Hãy cẩn thận với lệnh `rm -rf` vì nó xóa không khôi phục được!
+
+---
+
+## 📄 Thao Tác Với Tệp Tin
 
 ### Tạo tệp tin mới
+
 ```bash
-touch <tên-file>.<đuôi-file>
+touch <tên-file>.<đuôi-file>   # Tạo file trống
+nano <tên-file>.<đuôi-file>    # Tạo và mở file bằng trình soạn thảo nano
 ```
 
 ### Sao chép tệp tin
+
 ```bash
-cp <nguồn> <đích>
-cp <tệp-tin> <thư-mục-đích>
-cp -r <thư-mục-nguồn> <thư-mục-đích>    # Sao chép thư mục
+cp <nguồn> <đích>                  # Sao chép file
+cp -r <thư-mục-nguồn> <thư-mục-đích>    # Sao chép thư mục và nội dung
 ```
 
 ### Di chuyển và đổi tên tệp tin
+
 ```bash
 mv <tên-cũ> <tên-mới>               # Đổi tên
 mv <tệp-tin> <thư-mục-đích>        # Di chuyển
 ```
 
 ### Xóa tệp tin
+
 ```bash
 rm <tên-file>          # Xóa không xác nhận
 rm -i <tên-file>       # Xóa có xác nhận
 ```
 
-## Lệnh hệ thống
+---
+
+## ⚙️ Lệnh Hệ Thống
 
 ### Xem đường dẫn hiện tại
+
 ```bash
-pwd
+pwd     # Print Working Directory
 ```
 
 ### Liệt kê nội dung thư mục
-```bash
-ls              # Liệt kê cơ bản
-ls -l           # Liệt kê chi tiết
-ls -a           # Hiện cả file ẩn
-```
 
-## Liên kết và lối tắt
+| Lệnh | Mô tả |
+|------|-------|
+| `ls` | Liệt kê cơ bản |
+| `ls -l` | Liệt kê chi tiết (quyền, kích thước, thời gian) |
+| `ls -a` | Hiện cả file ẩn |
+| `ls -lh` | Liệt kê chi tiết với kích thước đọc được (KB, MB) |
 
-### Tạo liên kết mềm
+---
+
+## 🔗 Liên Kết Và Lối Tắt
+
+### Tạo liên kết mềm (symbolic link)
+
 ```bash
 ln -s <đường-dẫn-đích> <tên-liên-kết>
 ```
 
-## Thao tác với nội dung file
+> 💡 **Mẹo**: Liên kết mềm hoạt động giống như shortcut trong Windows
+
+---
+
+## 📝 Thao Tác Với Nội Dung File
 
 ### Đọc nội dung file
+
 ```bash
-cat <tên file>
+cat <tên-file>         # Hiển thị toàn bộ nội dung
+less <tên-file>        # Xem nội dung theo trang (ấn q để thoát)
+head <tên-file>        # Xem 10 dòng đầu tiên
+tail <tên-file>        # Xem 10 dòng cuối cùng
 ```
 
 ### Đếm số từ, câu
+
 ```bash
-wc <tên file>
+wc <tên-file>          # Trả về số dòng, số từ, số byte
 ```
-trả về số dòng, số từ, số byte
 
 ### So sánh kí tự
+
 ```bash
-diff <tên file 1> <tên file 2>
+diff <tên-file-1> <tên-file-2>
 ```
-trả về > nghĩa là file 1 không có dòng đó nhưng file 2 có
-trả về < nghĩa là file 1 có dòng đó nhưng file 2 không
+
+| Kết quả | Ý nghĩa |
+|---------|---------|
+| `>` | File 1 không có dòng đó nhưng file 2 có |
+| `<` | File 1 có dòng đó nhưng file 2 không |
 
 ### Tìm kiếm văn bản
+
 ```bash
-grep <nội dung cần tìm> <tên file muốn tìm>
+grep "<nội-dung-cần-tìm>" <tên-file>   # Tìm chuỗi trong file
+grep -i "<chuỗi>" <tên-file>           # Tìm không phân biệt hoa thường
+grep -r "<chuỗi>" <thư-mục>            # Tìm đệ quy trong thư mục
 ```
 
 ### Sắp xếp văn bản
+
 ```bash
-sort <tên file>
+sort <tên-file>              # Sắp xếp theo bảng chữ cái
+sort -n <tên-file>           # Sắp xếp theo số
+sort -r <tên-file>           # Sắp xếp ngược lại
 ```
 
 ### Lệnh uniq
+
 ```bash
-uniq <tên file>              # Loại bỏ các dòng liền kề giống nhau
-uniq -c <tên file>          # Hiển thị số lần xuất hiện của mỗi dòng
-uniq -d <tên file>          # Chỉ hiển thị các dòng lặp lại
-uniq -u <tên file>          # Chỉ hiển thị các dòng không lặp lại
+uniq <tên-file>              # Loại bỏ các dòng liền kề giống nhau
+uniq -c <tên-file>           # Hiển thị số lần xuất hiện của mỗi dòng
+uniq -d <tên-file>           # Chỉ hiển thị các dòng lặp lại
+uniq -u <tên-file>           # Chỉ hiển thị các dòng không lặp lại
 ```
 
-## Tìm kiếm và lọc
+---
+
+## 🔍 Tìm Kiếm Và Lọc
 
 ### Lệnh tìm kiếm trong thư mục
+
 ```bash
-find <đường dẫn> -name "<tên file>"    # Tìm file theo tên
+find <đường-dẫn> -name "<tên-file>"    # Tìm file theo tên
 find . -type f                         # Tìm tất cả các file
 find . -type d                         # Tìm tất cả các thư mục
+find . -size +10M                      # Tìm file lớn hơn 10MB
 ```
 
-## Điều hướng đầu vào và đầu ra
+---
+
+## ↪️ Điều Hướng Đầu Vào Và Đầu Ra
 
 ### Điều chỉnh đầu ra
+
 ```bash
-ls -l > myfiles.txt
+ls -l > myfiles.txt           # Ghi đè kết quả vào file
+ls -l >> myfiles.txt          # Nối thêm kết quả vào file
 ```
-Giải thích : 
-- ls - l : in danh sách các nội dung có trong đường dẫn hiện tại  
-- '>' myfiles.txt : chuyển kết quả đó và viết vào file txt
 
 ### Điều chỉnh đầu vào
-```bash
-java Guess < input.txt
-```
-Giải thích :
-- java Guess : chạy code java  
-- < input.txt : code viết trong file txt sẽ biên dịch
 
-### Kết hợp câu lệnh
 ```bash
-sort names.txt | uniq
+java Guess < input.txt        # Lấy input từ file
+```
+
+### Kết hợp câu lệnh (Pipes)
+
+```bash
+sort names.txt | uniq         # Đầu ra của lệnh này là đầu vào của lệnh kia
+ls -l | grep "txt"            # Tìm các file .txt trong danh sách
 ```
 
 ### Trình tự câu lệnh
-```bash
-sort abc.txt ; cat
-```
+
+| Cú pháp | Mô tả |
+|---------|-------|
+| `sort abc.txt ; cat` | Thực hiện tuần tự không phụ thuộc |
+| `sort abc.txt && cat` | Lệnh 2 chỉ chạy nếu lệnh 1 thành công |
+| `sort abc.txt  cat` | Lệnh 2 chỉ chạy nếu lệnh 1 thất bại |
+
+---
+
+## ⏯️ Quản Lý Tiến Trình
+
+### Xem ứng dụng và tiến trình đang chạy
 
 ```bash
-sort abc.txt && cat
-```
-
-Giải thích : dấu ; không yêu cầu lệnh trước thực hiện thành công. Trong khi && bắt buộc lệnh 1 phải chạy thành công rồi mới chạy lệnh 2
-
-## Quản lý tiến trình
-
-### Xem ứng dụng và tiến trình đang chạy (giống Task Manager)
-```bash
-top
+top                     # Hiển thị các tiến trình đang chạy (giống Task Manager)
+htop                    # Phiên bản đồ họa của top (cần cài đặt)
+ps aux                  # Liệt kê các tiến trình
 ```
 
 ### Dừng tiến trình 
+
 ```bash
-kill <pipid>
+kill <PID>              # Dừng tiến trình theo ID
+killall <tên-tiến-trình>  # Dừng tất cả tiến trình có tên cụ thể
 ```
 
 ### Tạm dừng tiến trình đang chạy
-Ctrl + Z
 
-## Tùy biến
+<kbd>Ctrl</kbd> + <kbd>Z</kbd> - Tạm dừng tiến trình hiện tại
+
+---
+
+## 🛠️ Tùy Biến
 
 ### Gán lệnh
+
 ```bash
-allias q=exit
+alias q='exit'                  # Tạo lệnh rút gọn
+alias ll='ls -la'               # Tạo lệnh tùy chỉnh
 ```
 
+> 💡 **Mẹo**: Thêm các alias vào file `~/.bashrc` để lưu trữ vĩnh viễn
 
-### Hướng dẫn lập trình trong linux
-### Với java
-### B1 : Tải trình biên dịch
+---
+
+## 💻 Lập Trình Trên Linux
+
+### Lập trình Java
+
+#### Cài đặt JDK
+
 ```bash
-sudo apt install default-jre
+sudo apt install default-jre default-jdk
+java --version                  # Kiểm tra phiên bản
 ```
 
-Sau tải xong có thể kiểm tra bằng 
-```bash
-java --version
-```
+#### Tạo và biên dịch chương trình
 
-### B2 : tạo file và viết code
 ```bash
+# Tạo file và viết code
 gedit Main.java
+
+# Biên dịch
+javac Main.java
+
+# Chạy chương trình
+java Main
 ```
 
-Code mẫu
+#### Code mẫu Java
 
 ```java
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         System.out.println("Hello World");
     }
 }
 ```
-### B3 : Chạy code
-```bash
-javac Main.java
-java Main.java
-```
 
-### Với C và C++
-### B1 : Tải trình biên dịch
+### Lập trình C/C++
+
+#### Cài đặt trình biên dịch
+
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install build-essential
 ```
 
-Sau tải xong có thể kiểm tra bằng 
+#### Kiểm tra cài đặt
+
 ```bash
 gcc -v
 make -v
 ```
-Nếu hiển thị phiên bản nghĩa là cài đặt thành công
-### B2 : tạo file và viết code
+
+#### C++: Tạo và biên dịch
+
 ```bash
+# Tạo file
 gedit main.cpp
+
+# Biên dịch
+g++ main.cpp -o program
+
+# Chạy
+./program
 ```
-code mẫu
+
+#### C: Tạo và biên dịch
+
+```bash
+# Tạo file
+gedit main.c
+
+# Biên dịch
+gcc main.c -o program
+
+# Chạy
+./program
+```
+
+#### Code mẫu C++
+
 ```cpp
 #include <iostream>
 
-int main () {
+int main() {
     std::cout << "Hello World";
+    return 0;
 }
-```
-### B3 : Chạy code
-```bash
-g++ main.cpp -o <tên file kết quả>
-./<tên file>
-```
-Với C thì tạo file có đuôi .c và chạy code như sau
-```bash
-gcc main.c -o <tên file kết quả>
-./<tên file>
 ```
